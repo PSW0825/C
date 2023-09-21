@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+
+
+// Union 정의
+
+union Data {
+
+    int intValue;
+
+    float floatValue;
+
+    char stringValue[20];
+
+};
+
+
+
+int main() {
+
+    union Data data;
+
+
+
+    // 데이터 할당
+
+    data.intValue = 42;
+
+
+
+    // 멤버 접근 및 출력
+
+    printf("정수값: %d\n", data.intValue);
+
+
+
+    // 다른 멤버 할당 및 출력
+
+    data.floatValue = 3.14;
+
+    printf("부동소수점값: %.2f\n", data.floatValue);
+
+
+
+    // 다시 다른 멤버 할당 및 출력
+
+    strcpy(data.stringValue, "Hello, Union!");
+
+    printf("문자열값: %s\n", data.stringValue);
+
+
+
+    return 0;
+
+}
