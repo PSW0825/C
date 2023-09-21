@@ -1,0 +1,65 @@
+#include <stdio.h>
+
+
+
+// 열거형 정의
+
+enum Days {
+
+    SUNDAY,    // 0
+
+    MONDAY,    // 1
+
+    TUESDAY,   // 2
+
+    WEDNESDAY, // 3
+
+    THURSDAY,  // 4
+
+    FRIDAY,    // 5
+
+    SATURDAY   // 6
+
+};
+
+
+
+int main() {
+
+    // 열거형 변수 선언 및 초기화
+
+    enum Days today = WEDNESDAY;
+
+
+
+    // 열거형 상수 사용
+
+    if (today == WEDNESDAY) {
+
+        printf("오늘은 수요일입니다.\n");
+
+    } else {
+
+        printf("오늘은 수요일이 아닙니다.\n");
+
+    }
+
+
+
+    // 열거형 상수를 배열 인덱스로 사용
+
+    const char* daysOfWeek[] = {
+
+        "일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"
+
+    };
+
+
+
+    printf("오늘은 %s입니다.\n", daysOfWeek[today]);
+
+
+
+    return 0;
+
+}
